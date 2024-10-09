@@ -13,7 +13,7 @@ describe('playerInspectorLogic', () => {
     beforeEach(() => {
         useMocks({
             get: {
-                'api/projects/:team_id/session_recordings/1/': {},
+                'api/environments/:team_id/session_recordings/1/': {},
             },
         })
         initKeaTests()
