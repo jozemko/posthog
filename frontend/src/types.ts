@@ -167,6 +167,7 @@ type AvailableFeatureUnion = `${AvailableFeature}`
 export enum ProductKey {
     COHORTS = 'cohorts',
     ACTIONS = 'actions',
+    ALERTS = 'alerts',
     EXPERIMENTS = 'experiments',
     FEATURE_FLAGS = 'feature_flags',
     ANNOTATIONS = 'annotations',
@@ -3218,6 +3219,7 @@ export interface Experiment {
         feature_flag_variants: MultivariateFlagVariant[]
         custom_exposure_filter?: FilterType
         aggregation_group_type_index?: integer
+        variant_screenshot_media_ids?: Record<string, string>
     }
     start_date?: string | null
     end_date?: string | null
@@ -3510,6 +3512,12 @@ export interface InstanceSetting {
     description?: string
     editable: boolean
     is_secret: boolean
+}
+
+export enum FunnelMathType {
+    AnyMatch = 'total',
+    FirstTimeForUser = 'first_time_for_user',
+    FirstTimeForUserWithFilters = 'first_time_for_user_with_filters',
 }
 
 export enum BaseMathType {
@@ -4298,6 +4306,7 @@ export enum SidePanelTab {
     Discussion = 'discussion',
     Status = 'status',
     Exports = 'exports',
+    ExperimentFeatureFlag = 'experiment-feature-flag',
 }
 
 export interface SourceFieldOauthConfig {

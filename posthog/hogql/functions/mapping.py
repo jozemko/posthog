@@ -342,6 +342,7 @@ HOGQL_CLICKHOUSE_FUNCTIONS: dict[str, HogQLFunctionMeta] = {
     "arraySplit": HogQLFunctionMeta("arraySplit", 2, None),
     "arrayReverseFill": HogQLFunctionMeta("arrayReverseFill", 2, None),
     "arrayReverseSplit": HogQLFunctionMeta("arrayReverseSplit", 2, None),
+    "arrayRotateRight": HogQLFunctionMeta("arrayRotateRight", 2, 2),
     "arrayExists": HogQLFunctionMeta("arrayExists", 1, None),
     "arrayAll": HogQLFunctionMeta("arrayAll", 1, None),
     "arrayFirst": HogQLFunctionMeta("arrayFirst", 2, None),
@@ -428,6 +429,7 @@ HOGQL_CLICKHOUSE_FUNCTIONS: dict[str, HogQLFunctionMeta] = {
     "parseDateTime": HogQLFunctionMeta("parseDateTimeOrNull", 2, 3, tz_aware=True),
     "parseDateTimeBestEffort": HogQLFunctionMeta("parseDateTime64BestEffortOrNull", 1, 2, tz_aware=True),
     "toTypeName": HogQLFunctionMeta("toTypeName", 1, 1),
+    "cityHash64": HogQLFunctionMeta("cityHash64", 1, 1),
     # dates and times
     "toTimeZone": HogQLFunctionMeta("toTimeZone", 2, 2),
     "timeZoneOf": HogQLFunctionMeta("timeZoneOf", 1, 1),
